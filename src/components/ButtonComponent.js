@@ -1,10 +1,10 @@
 import React from 'react'
-import { Button } from 'react-bootstrap'
+import { Button as Btn } from 'react-bootstrap'
 
-export function ButtonComponent ({ variant = 'success',value }) {
+export default function ButtonComponent ({handleClick, variant = 'success', value }) {
   return (
     <div className={'btn_div'}>
-      <Button variant={variant}>{value}</Button>
+      <Btn onClick={handleClick} variant={variant}>{value}</Btn>
     </div>
   )
 }
